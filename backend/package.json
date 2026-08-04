@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend root — runs all microservices together",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix gateway\" \"npm run dev --prefix services/auth\" --names \"GATEWAY,AUTH\" --prefix-colors \"cyan,magenta\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ioredis": "^6.0.0"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
